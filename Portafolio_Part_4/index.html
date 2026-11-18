@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Camilo Rendon
+    File Name: index.html
+    Date: 11/17/2026
+    Note: Home page, created by duplicating template.html and following the Home wireframe.
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Camilo Rendon, Software Development student and junior software developer. View my projects and get in touch.">
+    <title>Home | Camilo Rendon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Poppins:wght@600&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <!-- Skip link for keyboard users -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Site header: logo and primary navigation -->
+    <header class="site-header">
+        <a class="logo" href="index.html">Camilo Rendon</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">&#9776; Menu</button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main page content -->
+    <main id="main-content">
+
+        <!-- Hero: name, tagline, intro, buttons, and photo -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-text">
+                <h1 id="hero-heading">Hi, I'm Camilo Rendon</h1>
+                <p class="tagline">Junior Software Developer</p>
+                <p>I'm a Software Development student at Broward College with 1 year of experience working as a junior back-end developer. I write clean code in Python, Java, and C++, work with SQL and Git, and build websites with semantic HTML and CSS. I'm always learning new tools, and right now I'm looking for new opportunities where I can keep growing as a developer.</p>
+                <a class="button" href="projects.html">View My Work</a>
+                <a class="button button-outline" href="contact.html">Contact Me</a>
+            </div>
+            <img class="headshot" src="assets/images/headshot.jpg" alt="Photo of Camilo Rendon" width="600" height="600">
+        </section>
+
+        <!-- Featured projects: 1 column on mobile, 3 columns on desktop -->
+        <section class="featured" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Featured Projects</h2>
+            <div class="project-grid">
+
+                <article class="project-card">
+                    <img src="assets/images/project-soncalenos.jpg" alt="Home page of the Soncaleños website with a large CALI title and featured places and products" width="1200" height="680">
+                    <div class="card-body">
+                        <h3>Soncaleños</h3>
+                        <p>A live website about the art and culture of Cali, Colombia, that I built as a team with a group of friends. It has a local city guide, an online concept store with Cali-inspired products, and courses.</p>
+                        <p class="tags">Team project &middot; Website</p>
+                        <a href="https://soncalenos.com/">Visit the live site</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="assets/images/project-penalty-kicks.png" alt="Console screen of the Futbol Penalty Kick Tracker showing the main menu, last game results for each team, and the final score" width="488" height="1042">
+                    <div class="card-body">
+                        <h3>Futbol Penalty Kick Tracker</h3>
+                        <p>A Java console program that simulates a soccer penalty shootout. Users create an account and log in (saved to a text file), enter two teams and their kickers, and play 5 rounds plus sudden death if needed.</p>
+                        <p class="tags">Java &middot; OOP &middot; File I/O</p>
+                        <a href="https://github.com/CamiloStiwar/Penalty-Kicks-Program">View the code on GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="assets/images/project-everglades.png" alt="Console screen of Lost in the Everglades showing the main menu and the game rules" width="518" height="585">
+                    <div class="card-body">
+                        <h3>Lost in the Everglades</h3>
+                        <p>A C++ text RPG where a Ranger crosses a 5x5 map to rescue tourists before 12 gongs run out. Hidden dangers like alligators and pythons appear at random, and the player chooses to wait or fight.</p>
+                        <p class="tags">C++ &middot; 2D Arrays &middot; Random Numbers</p>
+                        <a href="https://github.com/CamiloStiwar/Everglades-Game">View the code on GitHub</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Call to action band -->
+        <section class="cta" aria-labelledby="cta-heading">
+            <h2 id="cta-heading">Let's Work Together</h2>
+            <p>I'm looking for new developer roles where I can keep growing. If you have a project or an opening, I'd love to hear from you.</p>
+            <a class="button" href="contact.html">Contact Me</a>
+        </section>
+
+    </main>
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Camilo Rendon</p>
+        <p><a href="https://github.com/CamiloStiwar">GitHub</a></p>
+    </footer>
+
+</body>
+</html>

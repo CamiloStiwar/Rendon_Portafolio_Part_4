@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Camilo Rendon
+    File Name: contact.html
+    Date: 11/17/2026
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to contact Camilo Rendon by email, GitHub, or LinkedIn.">
+    <title>Contact | Camilo Rendon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Poppins:wght@600&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <!-- Skip link for keyboard users -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Site header: logo and primary navigation -->
+    <header class="site-header">
+        <a class="logo" href="index.html">Camilo Rendon</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">&#9776; Menu</button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main page content -->
+    <main id="main-content">
+        <h1>Contact Me</h1>
+        <p>Ways to reach me about internships and junior developer jobs.</p>
+
+        <div class="contact-layout">
+
+            <!-- Contact form -->
+            <section class="contact-form" aria-labelledby="form-heading">
+                <h2 id="form-heading">Send Me a Message</h2>
+                <p class="tags">Fields marked with * are required.</p>
+
+                <form action="thanks.html" method="get">
+
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+
+                    <label for="phone">Phone (optional)</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="954-555-1234"
+                           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Use this format: 954-555-1234">
+
+                    <label for="reason">Reason for Contact *</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">-- Choose one --</option>
+                        <option value="internship">Internship</option>
+                        <option value="job">Junior developer job</option>
+                        <option value="project">Website or program project</option>
+                        <option value="other">Something else</option>
+                    </select>
+
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" minlength="10" required></textarea>
+
+                    <button class="button" type="submit">Send Message</button>
+                </form>
+            </section>
+
+            <!-- Sidebar with other ways to connect -->
+            <aside class="sidebar" aria-labelledby="connect-heading">
+                <h2 id="connect-heading">Other Ways to Connect</h2>
+                <p>You can also see my code and follow my work on GitHub.</p>
+                <a class="button button-outline" href="https://github.com/CamiloStiwar">GitHub Profile</a>
+                <h2>Response Time</h2>
+                <p>I usually answer within 1 to 2 days.</p>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Camilo Rendon</p>
+        <p><a href="https://github.com/CamiloStiwar">GitHub</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Camilo Rendon
+    File Name: about.html
+    Date: 11/17/2026
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Camilo Rendon's background, goals, and technical skills.">
+    <title>About | Camilo Rendon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Poppins:wght@600&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <!-- Skip link for keyboard users -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Site header: logo and primary navigation -->
+    <header class="site-header">
+        <a class="logo" href="index.html">Camilo Rendon</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">&#9776; Menu</button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main page content -->
+    <main id="main-content">
+        <h1>About Me</h1>
+
+        <!-- Two column layout: story on the left, quick facts on the right -->
+        <div class="about-layout">
+
+            <article class="about-story">
+
+                <section aria-labelledby="story-heading">
+                    <h2 id="story-heading">My Story</h2>
+                    <p>I'm a student in the Software Development program at Broward College. I like seeing an idea turn into something that works, whether it is a website or a program running in the console.</p>
+                    <p>For the past year I have worked as a junior back-end developer at Phenoscience. There I fixed bugs, worked with Git and GitHub on a team, took part in code reviews, and learned new tools whenever a project needed them. That experience showed me how real software gets built, and now I'm looking for my next opportunity to keep growing.</p>
+                </section>
+
+                <!-- Audio introduction with a transcript for accessibility -->
+                <section aria-labelledby="audio-heading">
+                    <h2 id="audio-heading">Hear It From Me</h2>
+                    <p>A short audio introduction where I talk about who I am.</p>
+                    <audio controls preload="metadata">
+                        <source src="assets/media/intro.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element. You can read the transcript below.
+                    </audio>
+                    <details class="transcript">
+                        <summary>Read the transcript</summary>
+                        <p>Hi, I'm Camilo Rendon. I'm a Software Development student at Broward College and I have one year of experience as a junior back-end developer. I build websites and programs in Python, Java, and C++. This portfolio shows some of the projects I'm proud of.</p>
+                    </details>
+                </section>
+
+                <section aria-labelledby="goals-heading">
+                    <h2 id="goals-heading">Where I'm Going</h2>
+                    <ul>
+                        <li>Finish my Software Development AS degree.</li>
+                        <li>Find a developer role where I can take on bigger projects.</li>
+                        <li>Keep learning new frameworks and grow into a mid-level developer.</li>
+                        <li>Keep building projects and adding them to this portfolio.</li>
+                    </ul>
+                </section>
+
+            </article>
+
+            <!-- Sidebar with photo and quick facts -->
+            <aside class="sidebar" aria-labelledby="facts-heading">
+                <img src="assets/images/headshot.jpg" alt="Photo of Camilo Rendon" width="600" height="600">
+                <h2 id="facts-heading">Quick Facts</h2>
+                <ul>
+                    <li><strong>School:</strong> Broward College</li>
+                    <li><strong>Program:</strong> Software Development AS</li>
+                    <li><strong>Experience:</strong> 1 year as a junior back-end developer</li>
+                    <li><strong>Languages:</strong> English and Spanish</li>
+                    <li><strong>Favorite language:</strong> Python</li>
+                </ul>
+                <a class="button" href="resume.html">See My Resume</a>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Camilo Rendon</p>
+        <p><a href="https://github.com/CamiloStiwar">GitHub</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,642 @@
+/*
+    Author: Camilo Rendon
+    File Name: styles.css
+    Date: 11/17/2026
+    Description: Global styles for the portfolio website (mobile-first).
+*/
+
+/* ==========================================
+   CSS Reset
+   ========================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body, div, span, header, nav, main, section, article, aside, footer,
+h1, h2, h3, h4, h5, h6, p, a, img, figure, figcaption, blockquote,
+ul, ol, li, form, label, input, textarea, button, table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* ==========================================
+   Global Typography and Colors
+   ========================================== */
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #1f2933;
+    background-color: #f4f6f8;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #1e3a5f;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #1e3a5f;
+    margin-bottom: 0.25em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+strong {
+    font-weight: 600;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    color: #2563eb;
+    word-break: break-word;
+}
+
+a:hover {
+    color: #1e3a5f;
+}
+
+/* Visible focus outline for keyboard users */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
+/* Skip link: hidden until it gets keyboard focus */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background-color: #ffffff;
+    color: #1e3a5f;
+    padding: 0.75em 1em;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    left: 1em;
+    top: 1em;
+}
+
+/* ==========================================
+   Header (proposal page uses the simple version)
+   ========================================== */
+header {
+    background-color: #1e3a5f;
+    color: #ffffff;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+header p {
+    margin: 0.5em 0 0;
+    color: #c9d6e3;
+}
+
+/* Site header with logo + navigation */
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1em;
+}
+
+.logo {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #c9d6e3;
+}
+
+/* ==========================================
+   Navigation (mobile: hamburger menu)
+   ========================================== */
+.menu-toggle {
+    display: none;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5em 0.75em;
+    border: 2px solid #c9d6e3;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* JavaScript adds the "js" class, so the menu still works if JS is off */
+.js .menu-toggle {
+    display: block;
+}
+
+.site-nav {
+    width: 100%;
+}
+
+.js .site-nav {
+    display: none;
+}
+
+.js .site-nav.open {
+    display: block;
+}
+
+.site-nav ul {
+    padding-top: 1em;
+}
+
+.site-nav a {
+    display: block;
+    min-height: 44px;
+    padding: 0.6em 0.75em;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.site-nav a:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.site-nav a[aria-current="page"] {
+    background-color: #ffffff;
+    color: #1e3a5f;
+}
+
+/* ==========================================
+   Main Content
+   ========================================== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+section {
+    background-color: #ffffff;
+    border-left: 5px solid #1e3a5f;
+    border-radius: 6px;
+    padding: 1em 1.5em;
+    margin: 1em 0;
+}
+
+main ul.bullets,
+section > ul,
+section > ol {
+    margin-left: 1.5em;
+}
+
+section > ul {
+    list-style: disc;
+}
+
+section > ol {
+    list-style: decimal;
+}
+
+li {
+    margin-bottom: 0.4em;
+}
+
+.sources-list {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    min-height: 44px;
+    padding: 0.7em 1.4em;
+    margin: 0 0.5em 0.75em 0;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 2px solid #2563eb;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #1e3a5f;
+    border-color: #1e3a5f;
+    color: #ffffff;
+}
+
+.button-outline {
+    background-color: transparent;
+    color: #2563eb;
+}
+
+/* ==========================================
+   Home Page
+   ========================================== */
+.hero {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 48px 0;
+    display: grid;
+    gap: 2em;
+}
+
+.hero h1 {
+    color: #1e3a5f;
+}
+
+.tagline {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #2563eb;
+    margin: 0.25em 0 1em;
+}
+
+.headshot {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.featured {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 48px 0;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.12);
+}
+
+.project-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: top;
+}
+
+.project-card .card-body {
+    padding: 1em 1.25em 1.25em;
+}
+
+.project-card p {
+    margin-bottom: 0.5em;
+}
+
+.tags {
+    font-size: 0.9rem;
+    color: #52606d;
+}
+
+.cta {
+    background-color: #1e3a5f;
+    border: 0;
+    color: #ffffff;
+    text-align: center;
+    padding: 2em 1.5em;
+    margin: 48px 0;
+}
+
+.cta h2 {
+    color: #ffffff;
+}
+
+.cta p {
+    color: #c9d6e3;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 1.5em;
+    color: #52606d;
+}
+
+.site-footer {
+    background-color: #1e3a5f;
+    color: #c9d6e3;
+}
+
+.site-footer p {
+    margin-bottom: 0.25em;
+}
+
+.site-footer a {
+    color: #ffffff;
+}
+
+.site-footer a:hover {
+    color: #c9d6e3;
+}
+
+/* ==========================================
+   Part 4: Interior Pages (mobile first)
+   ========================================== */
+
+/* Sidebar (aside) used on About, Resume, and Contact */
+.sidebar {
+    background-color: #ffffff;
+    border-top: 5px solid #2563eb;
+    border-radius: 6px;
+    padding: 1em 1.5em;
+    margin: 1em 0;
+    align-self: start;
+}
+
+.sidebar ul {
+    list-style: disc;
+    margin: 0 0 1em 1.5em;
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+}
+
+.sidebar img {
+    border-radius: 12px;
+    margin-bottom: 1em;
+}
+
+/* About page */
+.about-layout,
+.resume-layout,
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 2em;
+}
+
+audio {
+    width: 100%;
+    margin: 0.5em 0 1em;
+}
+
+.transcript summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 0.5em;
+}
+
+/* Projects page: video and project rows */
+.video-feature video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background-color: #1f2933;
+    margin: 0.5em 0;
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.12);
+    padding: 1.5em;
+    margin: 2em 0;
+}
+
+.project-row img {
+    width: 100%;
+    max-height: 560px;
+    object-fit: contain;
+    background-color: #0c0c0c;
+    border-radius: 6px;
+}
+
+/* Resume page: space between jobs */
+.resume-main ul + h3 {
+    margin-top: 1.25em;
+}
+
+/* Resume page: skills table */
+.table-wrap {
+    overflow-x: auto;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5em 0 1em;
+}
+
+.skills-table caption {
+    text-align: left;
+    color: #52606d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5em;
+}
+
+.skills-table th,
+.skills-table td {
+    text-align: left;
+    padding: 0.7em 1em;
+    border-bottom: 1px solid #d9e2ec;
+}
+
+.skills-table thead th {
+    background-color: #1e3a5f;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.skills-table tbody th {
+    font-weight: 600;
+    color: #1e3a5f;
+}
+
+/* Alternating row colors */
+.skills-table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+.skills-table tbody tr:nth-of-type(even) {
+    background-color: #e8f0fb;
+}
+
+.skills-table tbody tr:hover {
+    background-color: #c9d6e3;
+}
+
+/* Contact page: form */
+form label {
+    display: block;
+    font-weight: 600;
+    margin: 1em 0 0.3em;
+}
+
+form input,
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 0.6em 0.75em;
+    border: 2px solid #c9d6e3;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #1f2933;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Red border after the user leaves a field that is not valid */
+form input:user-invalid,
+form select:user-invalid,
+form textarea:user-invalid {
+    border-color: #c0392b;
+}
+
+form .button {
+    margin-top: 1.5em;
+}
+
+/* ==========================================
+   Media Query: Tablet and Desktop (768px and up)
+   ========================================== */
+@media screen and (min-width: 768px) {
+
+    header {
+        padding: 3em 1em;
+    }
+
+    .site-header {
+        padding: 1em 2em;
+    }
+
+    /* Hide the hamburger and show the full nav */
+    .js .menu-toggle {
+        display: none;
+    }
+
+    .site-nav,
+    .js .site-nav {
+        display: block;
+        width: auto;
+    }
+
+    .site-nav ul {
+        display: flex;
+        gap: 0.25em;
+        padding-top: 0;
+    }
+
+    main {
+        padding: 2em;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero {
+        grid-template-columns: 3fr 2fr;
+        align-items: center;
+        margin: 80px 0;
+    }
+
+    .featured {
+        margin: 80px 0 64px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .site-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5em 2em;
+    }
+
+    .site-footer p {
+        margin-bottom: 0;
+    }
+
+    /* Part 4: two column layouts with the aside on the right */
+    .about-layout,
+    .resume-layout,
+    .contact-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    /* Project rows: image on the left, text on the right */
+    .project-row {
+        grid-template-columns: 2fr 3fr;
+        align-items: center;
+    }
+
+    /* Flip every other project so the image is on the right */
+    .project-row:nth-of-type(odd) img {
+        order: 2;
+    }
+}

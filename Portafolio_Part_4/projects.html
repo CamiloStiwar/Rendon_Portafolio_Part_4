@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Camilo Rendon
+    File Name: projects.html
+    Date: 11/17/2026
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Class and personal projects by Camilo Rendon with live demos and source code.">
+    <title>Projects | Camilo Rendon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Poppins:wght@600&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <!-- Skip link for keyboard users -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Site header: logo and primary navigation -->
+    <header class="site-header">
+        <a class="logo" href="index.html">Camilo Rendon</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">&#9776; Menu</button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" aria-current="page">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main page content -->
+    <main id="main-content">
+        <h1>Projects</h1>
+        <p>Class and personal projects with live demos and links to the code on GitHub.</p>
+
+        <!-- Video demo with captions -->
+        <section class="video-feature" aria-labelledby="video-heading">
+            <h2 id="video-heading">Watch a Demo: Soncaleños</h2>
+            <video controls preload="metadata" width="1280" height="720" poster="assets/images/soncalenos-poster.jpg">
+                <source src="assets/media/soncalenos-demo.mp4" type="video/mp4">
+                <track src="assets/media/soncalenos-demo.vtt" kind="captions" srclang="en" label="English" default>
+                Your browser does not support the video element.
+            </video>        </section>
+
+        <!-- Each project is its own article: image on one side, details on the other -->
+        <article class="project-row" aria-labelledby="soncalenos-heading">
+            <img src="assets/images/project-soncalenos.jpg" alt="Home page of the Soncaleños website with a large CALI title and featured places and products" width="1200" height="680">
+            <div>
+                <h2 id="soncalenos-heading">Soncaleños</h2>
+                <p class="tags">Team project &middot; Website</p>
+                <p>A live website about the art and culture of Cali, Colombia, built with a group of friends. It has a city guide with local places, a concept store with Cali-inspired products, and courses.</p>
+                <h3>What I learned</h3>
+                <p>How to work on a website as a team and keep the design consistent across a lot of pages.</p>
+                <a class="button" href="https://soncalenos.com/">Visit the Live Site</a>
+            </div>
+        </article>
+
+        <article class="project-row" aria-labelledby="penalty-heading">
+            <img src="assets/images/project-penalty-kicks.png" alt="Console screen of the Futbol Penalty Kick Tracker showing the main menu, last game results for each team, and the final score" width="488" height="1042">
+            <div>
+                <h2 id="penalty-heading">Futbol Penalty Kick Tracker</h2>
+                <p class="tags">Java &middot; OOP &middot; File I/O</p>
+                <p>A Java console program that simulates a soccer penalty shootout. Users create an account and log in (saved to a text file), enter two teams and their kickers, and play 5 rounds plus sudden death if needed.</p>
+                <h3>What I learned</h3>
+                <p>Using classes and objects, and reading and writing data to files so it is saved between runs.</p>
+                <a class="button" href="https://github.com/CamiloStiwar/Penalty-Kicks-Program">View the Code</a>
+            </div>
+        </article>
+
+        <article class="project-row" aria-labelledby="everglades-heading">
+            <img src="assets/images/project-everglades.png" alt="Console screen of Lost in the Everglades showing the main menu and the game rules" width="518" height="585">
+            <div>
+                <h2 id="everglades-heading">Lost in the Everglades</h2>
+                <p class="tags">C++ &middot; 2D Arrays &middot; Random Numbers</p>
+                <p>A C++ text RPG where a Ranger crosses a 5x5 map to rescue tourists before 12 gongs run out. Hidden dangers like alligators and pythons appear at random, and the player chooses to wait or fight.</p>
+                <h3>What I learned</h3>
+                <p>Working with 2D arrays for the map and using random numbers to make every game different.</p>
+                <a class="button" href="https://github.com/CamiloStiwar/Everglades-Game">View the Code</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Camilo Rendon</p>
+        <p><a href="https://github.com/CamiloStiwar">GitHub</a></p>
+    </footer>
+
+</body>
+</html>
